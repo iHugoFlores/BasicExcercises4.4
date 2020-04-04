@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ReceiverVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ReceiverVC" customModule="PassingBackDelegationSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Text in Second view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXJ-Ya-YMN">
+                                <rect key="frame" x="113.5" y="442.5" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCz-yG-8ha">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="The Receiver" id="LbM-uX-pLk">
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="lNb-SN-IAD">
+                                            <connections>
+                                                <segue destination="RiU-ru-dlc" kind="show" identifier="goToSender" id="dmu-az-yIb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lXJ-Ya-YMN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Qz-1m-1Yh"/>
+                            <constraint firstItem="sCz-yG-8ha" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GVL-Mo-dsU"/>
+                            <constraint firstItem="lXJ-Ya-YMN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QRm-SM-6US"/>
+                            <constraint firstItem="sCz-yG-8ha" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cOA-F8-vKP"/>
+                            <constraint firstAttribute="trailing" secondItem="sCz-yG-8ha" secondAttribute="trailing" id="seh-1m-F7y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="lXJ-Ya-YMN" id="QYz-dp-but"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--SenderVC-->
+        <scene sceneID="nr2-fo-PAV">
+            <objects>
+                <viewController id="RiU-ru-dlc" customClass="SenderVC" customModule="PassingBackDelegationSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aim-IN-mzY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tV-9J-3K8">
+                                <rect key="frame" x="154" y="474" width="106" height="30"/>
+                                <state key="normal" title="Send Text Back"/>
+                                <connections>
+                                    <action selector="onPress:" destination="RiU-ru-dlc" eventType="touchUpInside" id="G6a-BG-1j2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6c-ML-4B5">
+                                <rect key="frame" x="20" y="387" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T6c-ML-4B5" firstAttribute="centerY" secondItem="Yci-ms-cJB" secondAttribute="centerY" id="17Q-hM-6L2"/>
+                            <constraint firstItem="9tV-9J-3K8" firstAttribute="top" secondItem="T6c-ML-4B5" secondAttribute="bottom" constant="53" id="6SD-Q0-8e6"/>
+                            <constraint firstItem="9tV-9J-3K8" firstAttribute="centerX" secondItem="Yci-ms-cJB" secondAttribute="centerX" id="ffe-io-JGr"/>
+                            <constraint firstItem="T6c-ML-4B5" firstAttribute="leading" secondItem="Yci-ms-cJB" secondAttribute="leading" constant="20" id="rOc-ue-Zsa"/>
+                            <constraint firstItem="Yci-ms-cJB" firstAttribute="trailing" secondItem="T6c-ML-4B5" secondAttribute="trailing" constant="20" id="rWE-TN-sHL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yci-ms-cJB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c5l-DO-CAp"/>
+                    <connections>
+                        <outlet property="textInput" destination="T6c-ML-4B5" id="DbO-hM-bFK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37W-sq-fWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985.50724637681162" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		F0CA0BC62438F28500EDB04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA0BC52438F28500EDB04A /* AppDelegate.swift */; };
 		F0CA0BC82438F28500EDB04A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA0BC72438F28500EDB04A /* SceneDelegate.swift */; };
-		F0CA0BCA2438F28500EDB04A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA0BC92438F28500EDB04A /* ViewController.swift */; };
+		F0CA0BCA2438F28500EDB04A /* ReceiverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA0BC92438F28500EDB04A /* ReceiverVC.swift */; };
 		F0CA0BCD2438F28500EDB04A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CA0BCB2438F28500EDB04A /* Main.storyboard */; };
 		F0CA0BCF2438F28600EDB04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CA0BCE2438F28600EDB04A /* Assets.xcassets */; };
 		F0CA0BD22438F28600EDB04A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CA0BD02438F28600EDB04A /* LaunchScreen.storyboard */; };
+		F0CA0BDA2438F67200EDB04A /* SenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA0BD92438F67200EDB04A /* SenderVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F0CA0BC22438F28500EDB04A /* PassingBackDelegationSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassingBackDelegationSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CA0BC52438F28500EDB04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0CA0BC72438F28500EDB04A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0CA0BC92438F28500EDB04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0CA0BC92438F28500EDB04A /* ReceiverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverVC.swift; sourceTree = "<group>"; };
 		F0CA0BCC2438F28500EDB04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0CA0BCE2438F28600EDB04A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0CA0BD12438F28600EDB04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0CA0BD32438F28600EDB04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0CA0BD92438F67200EDB04A /* SenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				F0CA0BC52438F28500EDB04A /* AppDelegate.swift */,
 				F0CA0BC72438F28500EDB04A /* SceneDelegate.swift */,
-				F0CA0BC92438F28500EDB04A /* ViewController.swift */,
+				F0CA0BC92438F28500EDB04A /* ReceiverVC.swift */,
 				F0CA0BCB2438F28500EDB04A /* Main.storyboard */,
 				F0CA0BCE2438F28600EDB04A /* Assets.xcassets */,
 				F0CA0BD02438F28600EDB04A /* LaunchScreen.storyboard */,
 				F0CA0BD32438F28600EDB04A /* Info.plist */,
+				F0CA0BD92438F67200EDB04A /* SenderVC.swift */,
 			);
 			path = PassingBackDelegationSwift;
 			sourceTree = "<group>";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0CA0BCA2438F28500EDB04A /* ViewController.swift in Sources */,
+				F0CA0BCA2438F28500EDB04A /* ReceiverVC.swift in Sources */,
 				F0CA0BC62438F28500EDB04A /* AppDelegate.swift in Sources */,
 				F0CA0BC82438F28500EDB04A /* SceneDelegate.swift in Sources */,
+				F0CA0BDA2438F67200EDB04A /* SenderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

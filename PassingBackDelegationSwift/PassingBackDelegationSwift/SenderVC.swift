@@ -8,15 +8,27 @@
 
 import UIKit
 
-class SenderVC: UIViewController {
+protocol UpdateLabelTextDelegate {
+    func updateLabelText(withText text: String)
+}
 
+class SenderVC: UIViewController {
+    
+    var delegate: UpdateLabelTextDelegate?
+
+    @IBOutlet weak var textInput: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onPress(_ sender: Any) {
+        delegate?.updateLabelText(withText: textInput.text!)
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
